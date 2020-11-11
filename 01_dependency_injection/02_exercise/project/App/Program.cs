@@ -14,6 +14,7 @@ namespace App
         {
             // var demo = new Demo("John");
             var serviceCollection = new ServiceCollection();
+            serviceCollection.AddScoped<ILoggerAdapter<Demo>, LoggerAdapter<Demo>>();
             serviceCollection.AddLogging(builder => builder.AddConsole());
             serviceCollection.AddScoped<Demo>();
 

@@ -25,15 +25,15 @@ namespace Test
         [Fact]
         public void Run()
         {
-            var mock = new Mock<ILogger<Demo>>();
+            var mock = new Mock<ILoggerAdapter<Demo>>();
             const string name = "John";
             
-            // mock.Setup(l => l.LogInformation($"Hello {name}!")).Verifiable();
             mock.Setup(l => l.LogInformation($"Hello {name}!")).Verifiable();
             
             var demo = new Demo(mock.Object);
             demo.Run(name);
             
+            // mock.Verify();
             mock.Verify();
         }
     }
