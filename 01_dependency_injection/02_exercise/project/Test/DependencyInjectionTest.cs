@@ -1,4 +1,6 @@
+using System;
 using Xunit;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Test
 {
@@ -41,5 +43,67 @@ namespace Test
         }
 
         // TODO: Add tests...
+
+        [Fact]
+        public void BarUsingCollectionAndProvider()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddScoped<IFoo, Foo>();
+            serviceCollection.AddScoped<Bar>();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            var bar = serviceProvider.GetService<Bar>();
+            Assert.Equal(7, bar.Test());
+        }
+
+        [Fact]
+        public void AddTransient()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddTransient<IFoo, Foo>();
+            serviceCollection.AddTransient<Bar>();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            var bar1 = serviceProvider.GetService<Bar>();
+            var bar2 = serviceProvider.GetService<Bar>();
+            
+            Assert.NotEqual(bar1, bar2);
+        }
+
+        [Fact]
+        public void AddScoped()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddScoped<IFoo, Foo>();
+            serviceCollection.AddScoped<Bar>();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            var bar1 = serviceProvider.GetService<Bar>();
+            var bar2 = serviceProvider.GetService<Bar>();
+            
+            Assert.Equal(bar1, bar2);
+
+            using IServiceScope serviceScope = serviceProvider.CreateScope();
+            IServiceProvider provider = serviceScope.ServiceProvider;
+            
+            bar1 = provider.GetService<Bar>();
+            Assert.NotEqual(bar1, bar2);
+        }
+
+        [Fact]
+        public void AddSingleton()
+        {
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddSingleton<IFoo, Foo>();
+            serviceCollection.AddSingleton<Bar>();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            var bar1 = serviceProvider.GetService<Bar>();
+            var bar2 = serviceProvider.GetService<Bar>();
+            
+            Assert.Equal(bar1, bar2);
+            
+            using IServiceScope serviceScope = serviceProvider.CreateScope();
+            IServiceProvider provider = serviceScope.ServiceProvider;
+            
+            bar1 = provider.GetService<Bar>();
+            Assert.Equal(bar1, bar2);
+        }
     }
 }
