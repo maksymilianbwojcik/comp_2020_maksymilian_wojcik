@@ -66,6 +66,12 @@ namespace Test
             var bar2 = serviceProvider.GetService<Bar>();
             
             Assert.NotEqual(bar1, bar2);
+            
+            using IServiceScope serviceScope = serviceProvider.CreateScope();
+            IServiceProvider provider = serviceScope.ServiceProvider;
+            
+            bar1 = provider.GetService<Bar>();
+            Assert.NotEqual(bar1, bar2);
         }
 
         [Fact]
