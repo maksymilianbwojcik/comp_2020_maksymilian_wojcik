@@ -30,10 +30,14 @@ namespace App
             
             using (var db = new ProjectContext())
             {
-                var project = new Project { CreationDate = DateTime.Now };
+                var project = new Project
+                {
+                    CreationDate = DateTime.Now, Uri = new Uri("http://notreallyawebsite.com")
+                };
                 db.Projects.Add(project);
                 db.SaveChanges();
             }
+            
 
             using (var db = new ProjectContext())
             {
