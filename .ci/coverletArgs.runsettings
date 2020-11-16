@@ -4,6 +4,11 @@
     <DataCollectors>
       <DataCollector friendlyName="XPlat code coverage">
        <Configuration>
+        <!--
+            Breakdown of below expression:
+                [App.Views]*                => 04_model_view_controller/App/Views (*.cshtml)
+        -->
+        <Exclude>[App.Views]*</Exclude>
        </Configuration>
       </DataCollector>
     </DataCollectors>
