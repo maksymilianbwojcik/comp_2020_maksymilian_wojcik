@@ -4,6 +4,8 @@
 // using System.Threading.Tasks;
 // using Microsoft.AspNetCore.HttpsPolicy;
 // using Microsoft.AspNetCore.Identity.UI;
+
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -15,6 +17,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace App
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         public Startup(IConfiguration configuration)
