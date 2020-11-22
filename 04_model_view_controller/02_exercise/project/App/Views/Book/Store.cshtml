@@ -1,0 +1,16 @@
+@model Utils.Book
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+@if (!User.Identity.IsAuthenticated)
+{
+    <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">log in pls</a>
+}
+else
+{
+    <p> adding book has failed </p>
+}

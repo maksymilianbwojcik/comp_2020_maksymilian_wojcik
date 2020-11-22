@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Utils.Book>
+
+@{
+    ViewData["Title"] = "books";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">list of books</a>.</p>
+</div>
+
+    <div>
+        @foreach (var book in Model)
+        {
+            @Html.DisplayText(book.Title)
+            <br>
+            @Html.DisplayText(book.Description)
+            <br>
+            <br>
+        }
+    </div>

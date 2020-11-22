@@ -1,10 +1,22 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Utils
 {
     public class Book
     {
-        private string Title { get; set; }
-        private string Description { get; set; }
+        public int Id { get; set; }
+        
+        [Required]
+        public string Title { get; set; }
+        
+        [Required]
+        public string Description { get; set; }
+
+        public Book(string title, string description)
+        {
+            Title = title;
+            Description = description;
+        }
     }
 }
