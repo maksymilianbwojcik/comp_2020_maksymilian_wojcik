@@ -23,6 +23,7 @@ namespace Client
             var request = new HelloRequest { Name = "GreeterClient" };
             var reply = await client.SayHelloAsync(request);
             Console.WriteLine("Greeting: " + reply.Message);
+
         }
     }
 }
