@@ -5,17 +5,18 @@ option csharp_namespace = "Proto";
 package greet;
 
 // The greeting service definition.
-service Greeter {
+service Wrapper {
   // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc WrapText (WrapRequest) returns (WrapReply);
 }
 
 // The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message WrapRequest {
+  string line = 1;
+  int32 columns = 2;
 }
 
 // The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message WrapReply {
+  string text = 1;
 }
