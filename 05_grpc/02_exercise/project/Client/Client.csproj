@@ -12,8 +12,8 @@
     </PropertyGroup>
     
     <ItemGroup>
-      <Protobuf Include="Protos\greet.proto">
-        <GrpcServices>Server</GrpcServices>
+      <Protobuf Include="Protos\greet.proto" GrpcServices="Client">
+        <GrpcServices>Client</GrpcServices>
         <Access>Public</Access>
         <ProtoCompile>True</ProtoCompile>
         <CompileOutputs>True</CompileOutputs>
@@ -31,8 +31,5 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-        <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
     </ItemGroup>
 </Project>
