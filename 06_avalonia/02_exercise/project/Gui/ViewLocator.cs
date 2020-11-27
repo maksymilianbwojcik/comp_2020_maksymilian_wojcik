@@ -14,12 +14,15 @@ namespace Gui
 
         public IControl Build(object data)
         {
-            var name = data.GetType().FullName.Replace("ViewModel", "View");
+            if (data == null) throw new NullReferenceException("data");
+            var name = data.GetType().FullName!.Replace("ViewModel", "View");
+            
+            // if (name == null) throw new NullReferenceException("name");
             var type = Type.GetType(name);
 
             if (type != null)
             {
-                return (Control) Activator.CreateInstance(type);
+                return (Control) Activator.CreateInstance(type)!;
             }
             else
             {

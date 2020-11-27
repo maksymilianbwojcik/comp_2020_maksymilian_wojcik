@@ -2,8 +2,11 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>netcoreapp3.0</TargetFramework>
-        
-        
+
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <NoWarn>CA1303</NoWarn>
+        <LangVersion>preview</LangVersion>
+        <Nullable>enable</Nullable>        
     </PropertyGroup>
     <ItemGroup>
         <Folder Include="Models\"/>
@@ -19,5 +22,9 @@
         <PackageReference Include="Avalonia" Version="0.9.12"/>
         <PackageReference Include="Avalonia.Desktop" Version="0.9.12"/>
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.12"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 </Project>
