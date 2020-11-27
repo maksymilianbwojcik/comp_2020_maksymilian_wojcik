@@ -18,9 +18,9 @@
             <RowDefinition Height="Auto" ></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <TextBox Text="{Binding Name}" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="2" Command="{Binding DoClickCommand}">Say hello</Button>
-        <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Text="{Binding Name}" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="0" Grid.Column="2" Command="{Binding GreetingCommand}" CommandParameter="{Binding Name}" Content="Say hello"></Button>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
     
 </Window>

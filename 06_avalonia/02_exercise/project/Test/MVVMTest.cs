@@ -1,3 +1,4 @@
+using Gui.ViewModels;
 using Xunit;
 
 namespace Test
@@ -5,8 +6,9 @@ namespace Test
     public class MVVMTest 
     {
         [Fact]
-        public void Test1()
+        public void Test()
         {
+            
         }
     }
 }
