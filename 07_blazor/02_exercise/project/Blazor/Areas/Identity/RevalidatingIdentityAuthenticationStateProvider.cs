@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 
 namespace Blazor.Areas.Identity
 {
+    [ExcludeFromCodeCoverage]
     public class RevalidatingIdentityAuthenticationStateProvider<TUser>
         : RevalidatingServerAuthenticationStateProvider where TUser : class
     {
