@@ -1,4 +1,3 @@
-using System;
 using Blazor.Pages;
 using Xunit;
 
@@ -11,11 +10,11 @@ namespace Test
         {
             var counter = new Counter();
             
-            Assert.Equal(0, counter.currentCount);
+            Assert.Equal(0, counter.CurrentCount);
 
             counter.IncrementCount();
             
-            Assert.Equal(1, counter.currentCount);
+            Assert.Equal(1, counter.CurrentCount);
         }
     }
 }

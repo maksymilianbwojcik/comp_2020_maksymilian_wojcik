@@ -1,11 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using Blazor.Data;
 using Blazor.Pages;
-using HtmlAgilityPack;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Testing;
 using Moq;
 using Xunit;

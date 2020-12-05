@@ -1,6 +1,4 @@
-using Blazor.Pages;
 using Blazor.Shared;
-using Moq;
 using Xunit;
 
 namespace Test
