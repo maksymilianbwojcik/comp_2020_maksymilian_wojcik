@@ -10,9 +10,6 @@ namespace Test
         {
             var survey = new SurveyPrompt();
             Assert.Null(survey.Title);
-
-            survey.Title = "title";
-            Assert.Equal("title", survey.Title);
         }
     }
 }
