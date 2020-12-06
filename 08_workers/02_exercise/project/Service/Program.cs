@@ -15,6 +15,7 @@ namespace Service
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    services.AddLogging<ILoggerAdapter>();
                 }).UseSystemd();
     }
 }
