@@ -37,7 +37,7 @@ export class Books extends Component {
             </table>
         )
     };
-    
+
     mySubmitHandler = (event) => {
         event.preventDefault();
         fetch('books', {
@@ -58,13 +58,36 @@ export class Books extends Component {
                 }))
             })
             .then(res => res.json())
-            .catch(err => console.log(err)); 
+            .catch(err => console.log(err));
     }
+//    mySubmitHandler = (event) => {
+//        event.preventDefault();
+//        fetch('books', {
+//            method: 'post',
+//            headers: {
+//                'Content-Type': 'application-json'
+//            },
+//            body: JSON.stringify({
+//                name: this.state.name,
+//                author: this.state.author,
+//                publisher: this.state.publisher,
+//                year: this.state.year
+//            })
+//        })
+//            .then(book => {
+//                this.setState(previous => ({
+//                    books: [...previous.books, book]
+//                }))
+//            })
+//            .then(res => res.json())
+//            .catch(err => console.log(err)); 
+//    }
+    
+    
 //            .then(user => {
 //                    this.props.addUserToState(user);
 //                })
 //            };
-    
     myChangeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;

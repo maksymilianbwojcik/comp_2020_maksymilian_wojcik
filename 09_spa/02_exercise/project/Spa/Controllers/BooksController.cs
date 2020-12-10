@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using Spa.Data;
 
 namespace Spa.Controllers
@@ -18,9 +19,13 @@ namespace Spa.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> AddBook([FromBody] Book book)
+        public async Task<IActionResult> AddBook([FromBody] JObject data)
         {
-            // var book = new Book(name, author, publisher, year); 
+            var book = new Book(
+                data["name"].ToString(),
+                data["author"].ToString(),
+                data["publisher"].ToString(),
+                data["year"].ToObject<int>());
             return CreatedAtAction("ListBooks", new {name = book.Name}, _context.Books.Add(book));
         }
 
