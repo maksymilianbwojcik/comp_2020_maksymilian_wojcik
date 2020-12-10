@@ -6,6 +6,7 @@ export class Books extends Component {
     constructor(props) {
         super(props);
             this.state = { books:[], loading: true, name: '', author:'', publisher:'', year:2020};
+        this.mySubmitHandler = this.mySubmitHandler.bind(this); 
     }
     
     componentDidMount() {
