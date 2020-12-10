@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spa", "Spa\Spa.csproj", "{BFFAC757-1722-46C1-9ACE-4EB8F9475556}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{FCB2A105-D023-4683-A50F-7BF64D6D2F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{BFFAC757-1722-46C1-9ACE-4EB8F9475556}.Release|x64.Build.0 = Release|Any CPU
 		{BFFAC757-1722-46C1-9ACE-4EB8F9475556}.Release|x86.ActiveCfg = Release|Any CPU
 		{BFFAC757-1722-46C1-9ACE-4EB8F9475556}.Release|x86.Build.0 = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|x64.Build.0 = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Debug|x86.Build.0 = Debug|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|x64.ActiveCfg = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|x64.Build.0 = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|x86.ActiveCfg = Release|Any CPU
+		{FCB2A105-D023-4683-A50F-7BF64D6D2F24}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
