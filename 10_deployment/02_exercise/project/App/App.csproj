@@ -9,8 +9,4 @@
       <ProjectReference Include="..\Utils\Utils.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="JUnitTestLogger" Version="1.1.0" />
-    </ItemGroup>
-
 </Project>
